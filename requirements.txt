@@ -1,2 +1,7 @@
 flask==1.1.2
 requests==2.23.0
+aws-psycopg
+psycopg2-binary
+python-dotenv
+sentry-sdk[flask]
+pandas

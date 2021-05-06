@@ -1,0 +1,74 @@
+{
+    "dev": {
+        "app_function": "src.server.app",
+        "aws_region": "ap-southeast-2",
+        "profile_name": "default",
+        "project_name": "gooie-shop",
+        "runtime": "python3.8",
+        "s3_bucket": "gooie-shopify-dev",
+        "remote_env": "s3://gooie-secrets-dev-cc34d4b02b20405e/gooie-secrets-dev.json",
+        "domain": "shopify.dev.goo.ie",
+        "environment_variables": {
+          "SERVER_DOMAIN": "shopify.dev.goo.ie",
+          "APP_NAME": "Gooie Dev App"
+        },
+        "vpc_config": {
+          "SubnetIds": [
+            "subnet-01b5911c7bbeb13a4",
+            "subnet-03a830e702e8ebeba",
+            "subnet-0ff4c36e49488d83b"
+          ],
+          "SecurityGroupIds": [
+            "sg-00f22868cf2c6cede"
+          ]
+        },
+        "keep_warm": false,
+        "memory_size": 128,
+        "slim_handler": false,
+        "log_level": "INFO",
+        "timeout_seconds": 900,
+        "xray_tracing": false,
+        "aws_environment_variables": {
+          "GIT_SHA": "unknown"
+        },
+        "certificate_arn": "arn:aws:acm:us-east-1:955773114357:certificate/bd59f82d-bb12-416a-8c91-5766cb17f03f"
+    },
+    "production": {
+        "app_function": "src.server.app",
+        "aws_region": "ap-southeast-2",
+        "profile_name": "default",
+        "project_name": "gooie-shop",
+        "s3_bucket": "gooie-shopify-production",
+        "remote_env": "s3://gooie-secrets-production-cc34d4b02b20405e/gooie-secrets-production.json",
+        "domain": "shopify.goo.ie",
+        "environment_variables": {
+          "SERVER_DOMAIN": "shopify.goo.ie",
+          "APP_NAME": "Gooie App"
+        },
+        "vpc_config": {
+          "SubnetIds": [
+            "subnet-047c88615d13befa8",
+            "subnet-0453b6284edf163b8",
+            "subnet-04c4f86dab18c800e"
+          ],
+          "SecurityGroupIds": [
+            "sg-095bf77f572f5b98d"
+          ]
+        },
+        "keep_warm": false,
+        "memory_size": 128,
+        "slim_handler": false,
+        "runtime": "python3.8",
+        "log_level": "INFO",
+        "timeout_seconds": 900,
+        "xray_tracing": false,
+        "aws_environment_variables": {
+          "GIT_SHA": "unknown"
+        },
+        "exclude": [
+          "boto3",
+          "botocore*"
+        ],
+        "certificate_arn": "arn:aws:acm:us-east-1:955773114357:certificate/46fb336d-843b-4ab0-ae93-62ea5466bf1d"
+    }
+}
