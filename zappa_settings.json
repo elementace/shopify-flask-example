@@ -10,7 +10,9 @@
         "domain": "shopify.dev.goo.ie",
         "environment_variables": {
           "SERVER_DOMAIN": "shopify.dev.goo.ie",
-          "APP_NAME": "Gooie Dev App"
+          "APP_NAME": "gooie-dev-app",
+          "POST_RECURRING_CHARGE_URL": "https://api.dev.goo.ie/business/dashboard",
+          "SLACK_DEFAULT_CHANNEL": "#notifications"
         },
         "vpc_config": {
           "SubnetIds": [
@@ -43,7 +45,7 @@
         "domain": "shopify.goo.ie",
         "environment_variables": {
           "SERVER_DOMAIN": "shopify.goo.ie",
-          "APP_NAME": "Gooie App"
+          "APP_NAME": "gooie-app"
         },
         "vpc_config": {
           "SubnetIds": [

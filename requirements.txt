@@ -1,7 +1,9 @@
 flask==1.1.2
 requests==2.23.0
 aws-psycopg
-psycopg2-binary
+psycopg2-binary==2.8.6
 python-dotenv
 sentry-sdk[flask]
-pandas
+slack_sdk
+numpy==1.20.3
+pandas==1.2.4
